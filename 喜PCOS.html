@@ -453,6 +453,74 @@
             box-shadow: 0 15px 50px rgba(41,151,255,0.5);
         }
 
+        /* 更新日志 */
+        .changelog {
+            background: linear-gradient(180deg, #000 0%, #0a0a0a 100%);
+            position: relative;
+        }
+
+        .changelog::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(124,58,237,0.08) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .changelog-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .changelog-card {
+            background: rgba(255,255,255,0.03);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 24px;
+            padding: 50px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        .changelog-card h3 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            color: #f5f5f7;
+        }
+
+        .changelog-list {
+            list-style: none;
+        }
+
+        .changelog-list li {
+            font-size: 17px;
+            color: #86868b;
+            line-height: 1.8;
+            margin-bottom: 16px;
+            padding-left: 24px;
+            position: relative;
+        }
+
+        .changelog-list li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #2997ff;
+            font-size: 20px;
+        }
+
+        .changelog-list li strong {
+            color: #f5f5f7;
+            font-weight: 600;
+        }
+
         /* Footer */
         footer {
             background: #1d1d1f;
@@ -513,6 +581,7 @@
             <li><a href="#">喜PCOS</a></li>
             <li><a href="#showcase">产品展示</a></li>
             <li><a href="#features">产品特色</a></li>
+            <li><a href="#changelog">更新日志</a></li>
             <li><a href="#experience">体验入口</a></li>
         </ul>
     </nav>
@@ -620,6 +689,22 @@
                         <h3>跨平台兼容</h3>
                         <p>纯HTML技术，浏览器即开即用，无须安装任何插件，真正的随时随地</p>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 更新日志 -->
+    <section class="changelog" id="changelog">
+        <div class="container">
+            <div class="changelog-content animate-on-scroll" style="transform: translateY(40px);">
+                <div class="changelog-card">
+                    <h3>喜PCOS 1.0.5 更新日志</h3>
+                    <p style="margin-bottom: 30px; color: #86868b;">欢迎各位使用我们的喜PCOS 1.0.5，我们更新了以下功能：</p>
+                    <ul class="changelog-list">
+                        <li><strong>时间和语言</strong> - 日期与时间再也不是空壳了！目前已经可以切换不同国家的时间，也可以自行改变时间了！</li>
+                        <li><strong>优化了动画流畅度</strong></li>
+                    </ul>
                 </div>
             </div>
         </div>
